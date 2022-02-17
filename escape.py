@@ -3,7 +3,8 @@
 #######################################################################
 # Michael D. McKinney
 # January 14, 2021
-# (Updated February 16, 2022 - bug/grammar fixes and improving code.)
+# (Updated February 16, 2022 - bug/grammar fixes and improving code.
+#  Also overhauled logic codes so debug mode won't break the game.)
 # A simple text adventure game to showcase elements of a text adventure
 # game such as movement, inventory, game states, clearing of screen,  
 # debugging/debug mode, etc.
