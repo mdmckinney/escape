@@ -3413,7 +3413,7 @@ def opening():
 		      "\nbut you do know that you need to escape.")
 		print("\nCan you escape?")
 		print('\n\n\n\nPress enter to begin the game or type "HELP"'
-			  'and press enter to see \ninstruction on how to '
+			  ' and press enter to see \ninstruction on how to '
                           'interact with the game.\n')
 		player_input = input("> ")
 		player_input = player_input.strip()		
