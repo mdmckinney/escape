@@ -68,19 +68,19 @@ def centerroom():
 
 	### SET THE COLOR OF DOOR LIGHTS      ### 
 	### (RED = LOCKED, GREEN = UNLOCKED.) ###
-	if game_states["northdoor"] == 0:
+	if game_states["northdoor"] != 1:
 		print("The light above the door in the north is red.")
 	if game_states["northdoor"] == 1:
 		print("The light above the door in the north is green.")		
-	if game_states["southdoor"] == 0:
+	if game_states["southdoor"] != 1:
 		print("The light above the door in the south is red.")
 	if game_states["southdoor"] == 1:
 		print("The light above the door in the south is green.")	
-	if game_states["eastdoor"] == 0:
+	if game_states["eastdoor"] != 1:
 		print("The light above the door in the east is red.")
 	if game_states["eastdoor"] == 1:
 		print("The light above the door in the east is green.")	
-	if game_states["westdoor"] == 0:
+	if game_states["westdoor"] != 1:
 		print("The light above the door in the west is red.")
 	if game_states["westdoor"] == 1:
 		print("The light above the door in the west is green.")
@@ -95,25 +95,25 @@ def centerroom():
 
 		### NORTH / SOUTH / EAST / WEST ###
 		if player_input == 'n' or player_input == 'north':
-			if game_states["northdoor"] == 0:
+			if game_states["northdoor"] != 1:
 				print("The north door is locked.")
 				continue
 			if game_states["northdoor"] == 1:
 				northroom()	
 		if player_input == 's' or player_input == 'south':
-			if game_states["southdoor"] == 0:
+			if game_states["southdoor"] != 1:
 				print("The south door is locked.")
 				continue
 			if game_states["southdoor"] == 1:
 				southroom()	
 		if player_input == 'e' or player_input == 'east':
-			if game_states["eastdoor"] == 0:
+			if game_states["eastdoor"] != 1:
 				print("The east door is locked.")
 				continue
 			if game_states["eastdoor"] == 1:
 				eastroom()	
 		if player_input == 'w' or player_input == 'west':
-			if game_states["westdoor"] == 0:
+			if game_states["westdoor"] != 1:
 				print("The west door is locked.")
 				continue
 			if game_states["westdoor"] == 1:
@@ -126,19 +126,19 @@ def centerroom():
 			print("There is a light source on the ceiling.")
 			print("It looks like a very bright LED embedded in the ceiling.")
 			print("There are four doors here, with a light above it.")
-			if game_states["northdoor"] == 0:
+			if game_states["northdoor"] != 1:
 					print("The light above the door in the north is red.")
 			if game_states["northdoor"] == 1:
 					print("The light above the door in the north is green.")		
-			if game_states["southdoor"] == 0:
+			if game_states["southdoor"] != 1:
 					print("The light above the door in the south is red.")
 			if game_states["southdoor"] == 1:
 					print("The light above the door in the south is green.")	
-			if game_states["eastdoor"] == 0:
+			if game_states["eastdoor"] != 1:
 					print("The light above the door in the east is red.")
 			if game_states["eastdoor"] == 1:
 					print("The light above the door in the east is green.")	
-			if game_states["westdoor"] == 0:
+			if game_states["westdoor"] != 1:
 					print("The light above the door in the west is red.")
 			if game_states["westdoor"] == 1:
 					print("The light above the door in the west is green.")	
@@ -151,19 +151,19 @@ def centerroom():
 			player_input == 'look light above door'):
 			print("The light is an indicator of the status of the door.")
 			print("Red is locked and green is unlocked.")
-			if game_states["northdoor"] == 0:
+			if game_states["northdoor"] != 1:
 					print("The light above the door in the north is red.")
 			if game_states["northdoor"] == 1:
 					print("The light above the door in the north is green.")		
-			if game_states["southdoor"] == 0:
+			if game_states["southdoor"] != 1:
 					print("The light above the door in the south is red.")
 			if game_states["southdoor"] == 1:
 					print("The light above the door in the south is green.")	
-			if game_states["eastdoor"] == 0:
+			if game_states["eastdoor"] != 1:
 					print("The light above the door in the east is red.")
 			if game_states["eastdoor"] == 1:
 					print("The light above the door in the east is green.")	
-			if game_states["westdoor"] == 0:
+			if game_states["westdoor"] != 1:
 					print("The light above the door in the west is red.")
 			if game_states["westdoor"] == 1:
 					print("The light above the door in the west is green.")			
@@ -176,19 +176,19 @@ def centerroom():
 			print("The light above the door is an indicator of the status of "
 				  "the door.")
 			print("Red is locked and green is unlocked.")
-			if game_states["northdoor"] == 0:
+			if game_states["northdoor"] != 1:
 					print("The light above the door in the north is red.")
 			if game_states["northdoor"] == 1:
 					print("The light above the door in the north is green.")		
-			if game_states["southdoor"] == 0:
+			if game_states["southdoor"] != 1:
 					print("The light above the door in the south is red.")
 			if game_states["southdoor"] == 1:
 					print("The light above the door in the south is green.")	
-			if game_states["eastdoor"] == 0:
+			if game_states["eastdoor"] != 1:
 					print("The light above the door in the east is red.")
 			if game_states["eastdoor"] == 1:
 					print("The light above the door in the east is green.")	
-			if game_states["westdoor"] == 0:
+			if game_states["westdoor"] != 1:
 					print("The light above the door in the west is red.")
 			if game_states["westdoor"] == 1:
 					print("The light above the door in the west is green.")						
@@ -219,7 +219,7 @@ def eastroom():
 		  "turns red.")
 
 	### LIGHT ABOVE THE DOOR.  (RED IS LOCKED, GREEN IS UNLOCKED.) ###
-	if game_states["eastdoor"] == 0:
+	if game_states["eastdoor"] != 1:
 			print("The light above the door in the west is red.")				
 	if game_states["eastdoor"] == 1:
 			print("The light above the door in the west is green.")	
@@ -312,7 +312,7 @@ def eastroom():
 			player_input == 'look light above door'):
 			print("The light is an indicator of the status of the door.")
 			print("Red is locked and green is unlocked.")
-			if game_states["eastdoor"] == 0:
+			if game_states["eastdoor"] != 1:
 					print("The light above the door in the west is red.")
 			if game_states["eastdoor"] == 1:
 					print("The light above the door in the west is green.")			
@@ -325,7 +325,7 @@ def eastroom():
 			print("The light above the door is an indicator of the status of "
 			      "the door.")
 			print("Red is locked and green is unlocked.")	
-			if game_states["eastdoor"] == 0:
+			if game_states["eastdoor"] != 1:
 					print("The light above the door in the west is red.")
 			if game_states["eastdoor"] == 1:
 					print("The light above the door in the west is green.")				
@@ -354,7 +354,7 @@ def eastroom():
 			player_input == 'push green switch' or
 			player_input == 'press green' or
 			player_input == 'push green') and 
-			(game_states["northdoor"] == 0 and game_states["blackbox"] != 2)):
+			(game_states["northdoor"] != 1 and game_states["blackbox"] != 2)):
 			print("You press the green switch.")
 			game_states["northdoor"] = 1
 			continue
@@ -381,7 +381,7 @@ def eastroom():
 			player_input == 'push green switch' or
 			player_input == 'press green' or
 			player_input == 'push green') and 
-			(game_states["northdoor"] == 0 and game_states["blackbox"] == 2)):
+			(game_states["northdoor"] != 1 and game_states["blackbox"] == 2)):
 			print("You press the green switch.")
 			game_states["northdoor"] = 0
 			continue					
@@ -416,7 +416,7 @@ def eastroom():
 			player_input == 'push yellow switch' or
 			player_input == 'press yellow' or
 			player_input == 'push yellow') and 
-			game_states["eastdoor"] == 0) and "paper" in inventory):
+			game_states["eastdoor"] != 1) and "paper" in inventory):
 			print("You press the yellow switch.")
 			print("\nThe light above the door in the west is now green.")
 			game_states["eastdoor"] = 1
@@ -670,8 +670,14 @@ def westroom():
 				player_input == "turn flashlight on") and
 				("flashlight" not in inventory)):
 				print("What flashlight?")
-				continue									
-
+				continue
+			    
+			if ((player_input == "turn off flashlight" or 
+				player_input == "turn flashlight off") and
+				("flashlight" not in inventory)):
+				print("What flashlight?")
+				continue
+			    
 			if ((player_input == "turn on flashlight" or 
 				player_input == "turn flashlight on") and
 				("flashlight" in inventory and
@@ -715,7 +721,7 @@ def westroom():
 				print("There is no route south from here.")
 				continue
 			if player_input == 'e' or player_input == 'east':
-				if game_states["westdoor"] == 0:
+				if game_states["westdoor"] != 1:
 					print("The door is locked.")
 					continue
 				if game_states["westdoor"] == 1:
@@ -731,28 +737,28 @@ def westroom():
 				print("There is no light anywhere in the room except for the "
 					  "light \nabove the door in the east and the flashlight.")
 				print("There is a door to the east.")	
-				if game_states["westdoor"] == 0:
+				if game_states["westdoor"] != 1:
 					print("The light above the door in the east is red.")
 				if game_states["westdoor"] == 1:
 					print("The light above the door in the east is green.")				
-				print("There is a golden box here in center of the room.")
+				print("There is a golden box here in center of the room.")				
 				print("The golden box looks like it's made out of gold.")
-				if game_states["blackbox"] == 0:
-					print("The golden box is currently closed.")	
-				if game_states["blackbox"] == 1:
-					print("The golden box is currently open.")	
+				if game_states["goldenbox"] == 0:
+					print("The golden box is currently closed.")    
+				if game_states["goldenbox"] == 1:
+					print("The golden box is currently open.")  
 					if "iron key" not in inventory:
 						print("There is an iron key inside the golden box.")
 					if "iron key" in inventory:
-						print("The golden box is empty.")	
-				continue		
+						print("The golden box is empty.")   
+				continue        
 
 			### LOOK DOOR LIGHT ###
 			if (player_input == 'look door light' or 
 				player_input == 'look light above door'):
 				print("The light is an indicator of the status of the door.")
 				print("Red is locked and green is unlocked.")
-				if game_states["westdoor"] == 0:
+				if game_states["westdoor"] != 1:
 					print("The light above the door in the east is red.")
 				if game_states["westdoor"] == 1:
 					print("The light above the door in the east is green.")			
@@ -768,7 +774,7 @@ def westroom():
 				print("The light above the door is an indicator of the status "
 					  "of the door.")
 				print("Red is locked and green is unlocked.")
-				if game_states["westdoor"] == 0:
+				if game_states["westdoor"] != 1:
 					print("The light above the door in the east is red.")
 				if game_states["westdoor"] == 1:
 					print("The light above the door in the east is green.")		
@@ -1088,14 +1094,13 @@ def southroom():
 	print("It's quite messy in here.")
 
 	### DOOR LIGHT STATE ###	      	 	
-	if game_states["southdoor"] == 0:
+	if game_states["southdoor"] != 1:
 			print("The light above the door in the north is red.")
 	if game_states["southdoor"] == 1:
 			print("The light above the door in the north is green.")	
 
 	### METAL ACCESS PANEL ###
-	if (game_states["southaccesspanel"] == 0 or 
-		game_states["southaccesspanel"] == 1):
+	if game_states["southaccesspanel"] != 2:
 		print("There is a metal access panel on the west wall. It is currently "
 		      "closed.")	
 	if game_states["southaccesspanel"] == 2:
@@ -1137,7 +1142,7 @@ def southroom():
 
 		### NORTH / SOUTH / EAST / WEST ###
 		if player_input == 'n' or player_input == 'north':
-			if game_states["southdoor"] == 0:
+			if game_states["southdoor"] != 1:
 				print("The door is locked.")
 				continue
 			if game_states["southdoor"] == 1:
@@ -1160,7 +1165,7 @@ def southroom():
 			print("There is a light source on the ceiling.")
 			print("It looks like a very bright LED embedded in the ceiling.")
 			print("There is a door in the north.")	
-			if game_states["southdoor"] == 0:
+			if game_states["southdoor"] != 1:
 				print("The light above the door is red.")
 			if game_states["southdoor"] == 1:
 				print("The light above the door is green.")				
@@ -1178,8 +1183,7 @@ def southroom():
 			print("Gears are stacked in northeast corner.")
 			print("Springs are scattered all over the room.")
 			print("There is a metal access panel on the west wall.")
-			if (game_states["southaccesspanel"] == 0 or 
-				game_states["southaccesspanel"] == 1):
+			if (game_states["southaccesspanel"] != 2):
 				print("The access panel is currently closed.")
 			if (game_states["southaccesspanel"] == 2):
 				print("The access panel is currently open.")	
@@ -1194,7 +1198,7 @@ def southroom():
 			player_input == 'look light above door'):
 			print("The light is an indicator of the status of the door.")
 			print("Red is locked and green is unlocked.")
-			if game_states["southdoor"] == 0:
+			if game_states["southdoor"] != 1:
 					print("The light above the door in the north is red.")
 			if game_states["southdoor"] == 1:
 					print("The light above the door in the north is green.")			
@@ -1207,7 +1211,7 @@ def southroom():
 			print("The light above the door is an indicator of the status of "
 				  "the door.")
 			print("Red is locked and green is unlocked.")
-			if game_states["southdoor"] == 0:
+			if game_states["southdoor"] != 1:
 				print("The light above the door in the north is red.")
 			if game_states["southdoor"] == 1:
 				print("The light above the door in the north is green.")	
@@ -1627,7 +1631,7 @@ def northroom():
 	game_states["eastdoor"] = 0
 
 	### DOOR LIGHT STATE ###	
-	if game_states["northdoor"] == 0:
+	if game_states["northdoor"] != 1:
 			print("The light above the door in the south is red.")
 	if game_states["northdoor"] == 1:
 			print("The light above the door in the south is green.")		
@@ -1638,7 +1642,7 @@ def northroom():
 	print("There is a keyhole on the iron gate.")
 
 	### ACCESS PANEL STATUS ###	
-	if game_states["northaccesspanel"] == 0:
+	if game_states["northaccesspanel"] != 1:
 		print("There is a metal access panel on the west wall.  It is currently"
 		      " closed.")	
 	if game_states["northaccesspanel"] == 1:
@@ -1646,7 +1650,7 @@ def northroom():
 		      " open.  You can see gray and white switches.")	
 
 	### SILVER BOX STATUS ###	      	 
-	if game_states["silverbox"] == 0:
+	if game_states["silverbox"] != 1:
 		print("There is a silver box on the floor in center of the room.")
 		print("The silver box is currently closed.")
 		print("There is a keyhole on a side of the silver box.")	
@@ -1674,7 +1678,7 @@ def northroom():
 		if ((player_input == 'n' or
                      player_input == 'north' or
                      player_input == 'open gate') and 
-			game_states["irongate"] == 0):
+			game_states["irongate"] != 1):
 			print("The iron gate is locked.")
 			continue
 		if ((player_input == 'n' or
@@ -1684,7 +1688,7 @@ def northroom():
 			game_states["escaped"] = 1
 			end()			
 		if player_input == 's' or player_input == 'south':
-			if game_states["northdoor"] == 0:
+			if game_states["northdoor"] != 1:
 				print("The door is locked.")
 				continue
 			if game_states["northdoor"] == 1:
@@ -1710,14 +1714,14 @@ def northroom():
 			print("There is a light source on the ceiling.")
 			print("It looks like a very bright LED embedded in the ceiling.")		
 			print("There is a door in the south.")	
-			if game_states["northdoor"] == 0:
+			if game_states["northdoor"] != 1:
 				print("The light above the door is red.")
 			if game_states["northdoor"] == 1:
 				print("The light above the door is green.")	
 			print("In the north is an iron gate blocking the passage to the "
 				  "exit.")			
 			print("There is a silver box in center of the room.")
-			if game_states["silverbox"] == 0:
+			if game_states["silverbox"] != 1:
 				print("The silver box is currently closed.")	
 			if game_states["silverbox"] == 1:
 				print("The silver box is currently open.")
@@ -1726,7 +1730,7 @@ def northroom():
 				if "batteries" in inventory:
 					print("The silver box is empty.")	
 			print("There is a metal access panel on the west wall.")
-			if game_states["northaccesspanel"] == 0:
+			if game_states["northaccesspanel"] != 1:
 				print("The access panel is currently closed.")
 			if (game_states["northaccesspanel"] == 1):
 				print("The access panel is currently open.")	
@@ -1741,7 +1745,7 @@ def northroom():
 			player_input == 'look light above door'):
 			print("The light is an indicator of the status of the door.")
 			print("Red is locked and green is unlocked.")
-			if game_states["northdoor"] == 0:
+			if game_states["northdoor"] != 1:
 					print("The light above the door in the south is red.")
 			if game_states["northdoor"] == 1:
 					print("The light above the door in the south is green.")			
@@ -1756,7 +1760,7 @@ def northroom():
 			print("The light above the door is an indicator of the status of "
 				"the door.")
 			print("Red is locked and green is unlocked.")
-			if game_states["northdoor"] == 0:
+			if game_states["northdoor"] != 1:
 					print("The light above the door in the south is red.")
 			if game_states["northdoor"] == 1:
 					print("The light above the door in the south is green.")		
@@ -1769,7 +1773,7 @@ def northroom():
 			player_input == 'open metal access panel' or
 			player_input == 'open panel' or
 			player_input == 'open access') and 
-			game_states["northaccesspanel"] == 0):
+			game_states["northaccesspanel"] != 1):
 			game_states["northaccesspanel"] = 1
 			game_states["northdoor"] = 0
 			print("Opening the metal access panel reveals two switches.")
@@ -1801,7 +1805,7 @@ def northroom():
 			player_input == 'close metal access panel' or
 			player_input == 'close panel' or
 			player_input == 'close access') and 
-			game_states["northaccesspanel"] == 0):	
+			game_states["northaccesspanel"] != 1):	
 			print("It's already closed.")
 			continue	
 
@@ -1810,7 +1814,7 @@ def northroom():
 			 player_input == 'look metal access' or
 			 player_input == 'look access panel' or
 			 player_input == 'look panel') and
-			(game_states["northaccesspanel"] == 0)):
+			(game_states["northaccesspanel"] != 1)):
 			print("It's a metal access panel. It's currently closed.")
 			continue
 
@@ -1831,7 +1835,7 @@ def northroom():
 				print("Inside the access panel are gray and white switches.")	
 				print("Both gray and white switches are round push button "
 					  "switch the size of a dime.")	
-			if "northaccesspanel" == 0:
+			if "northaccesspanel" != 1:
 				print("I don't see any switch here.")
 			continue		
 
@@ -1840,7 +1844,7 @@ def northroom():
 			if "northaccesspanel" == 1:
 				print("Gray switch inside the access panel is a round push "
 				 	  "button switch the size of a dime.")	
-			if "northaccesspanel" == 0:
+			if "northaccesspanel" != 1:
 				print("I don't see any gray switch here.")				 	  	
 			continue			
 
@@ -1853,7 +1857,7 @@ def northroom():
 
 		if ((player_input == 'take gray switch' or 
 			player_input == 'take gray') and 
-			(game_states["northaccesspanel"] == 0)):
+			(game_states["northaccesspanel"] != 1)):
 			print("What gray switch?")
 			continue			
 
@@ -1861,7 +1865,7 @@ def northroom():
 			player_input == 'push gray switch' or
 			player_input == 'press gray' or
 			player_input == 'push gray') and
-			game_states["northaccesspanel"] == 0):
+			game_states["northaccesspanel"] != 1):
 			print("What gray switch?")
 			continue
 
@@ -1870,7 +1874,7 @@ def northroom():
 			player_input == 'press gray' or
 			player_input == 'push gray') and
 			game_states["northaccesspanel"] == 1) and	
-			game_states["southdoor"] == 0):
+			game_states["southdoor"] != 1):
 			print("You press the gray switch.")
 			game_states["southdoor"] = 1
 			continue
@@ -1890,7 +1894,7 @@ def northroom():
 			if "northaccesspanel" == 1:
 				print("White switch inside the access panel is a round push "
 					  "button switch the size of a dime.")	
-			if "northaccesspanel" == 0:
+			if "northaccesspanel" != 1:
 				print("I don't see any white switch here.")				 	  	
 			continue		
 
@@ -1903,7 +1907,7 @@ def northroom():
 
 		if ((player_input == 'take white switch' or 
 			player_input == 'take white') and 
-			(game_states["northaccesspanel"] == 0)):
+			(game_states["northaccesspanel"] != 1)):
 			print("What white switch?")
 			continue		
 
@@ -1911,7 +1915,7 @@ def northroom():
 			player_input == 'push white switch' or
 			player_input == 'press white' or
 			player_input == 'push white') and
-			game_states["northaccesspanel"] == 0):
+			game_states["northaccesspanel"] != 1):
 			print("What white switch?")
 			continue
 
@@ -1945,7 +1949,7 @@ def northroom():
 
 		if ((player_input == 'take batteries') and
 			"batteries" not in inventory and 
-			game_states["silverbox"] == 0):
+			game_states["silverbox"] != 1):
 			print("What batteries?")		
 
 		if ((player_input == 'look batteries') and
@@ -1957,7 +1961,7 @@ def northroom():
 		if ((player_input == 'open silver box' or 
 			player_input == 'open box') and
 			"silver key" not in inventory and 
-			game_states["silverbox"] == 0):
+			game_states["silverbox"] != 1):
 			print("You can't open the silver box.  You don't have the correct "
 				  "key to open it.")
 			continue		
@@ -1989,7 +1993,7 @@ def northroom():
 
 		if ((player_input == 'look box' or 
 			 player_input == 'look silver box') and
-			(game_states["silverbox"] == 0)):
+			(game_states["silverbox"] != 1)):
 			print("The silver box looks like it's made out of silver. "
 				  "The silver box is currently closed.")
 			print("There is a keyhole on a side of the silver box.")
@@ -2014,7 +2018,7 @@ def northroom():
 		if ((player_input == 'open gate' or 
 			player_input == 'open iron gate') and
 			"iron key" not in inventory and 
-			game_states["irongate"] == 0):
+			game_states["irongate"] != 1):
 			print("You can't open the iron gate.  You need a key to open it.")
 			continue	
 
@@ -2037,7 +2041,7 @@ def northroom():
 			player_input == 'open box with silver key' or
 			player_input == 'open box using silver key') and
 			"silver key" in inventory and 
-			game_states["silverbox"] == 0):
+			game_states["silverbox"] != 1):
 			print("You insert the silver key into the keyhole on the "
 				  "silver box.")
 			print("The key fits, and the silver box opens.")
@@ -2250,7 +2254,7 @@ def northroom():
 			player_input == 'use iron key to unlock iron gate' or		
 			player_input == 'use iron key to unlock gate') and
 			"iron key" in inventory and 
-			game_states["irongate"] == 0):
+			game_states["irongate"] != 1):
 			print("Iron gate is now unlocked.")
 			game_states["irongate"] = 1
 			continue			
@@ -2425,7 +2429,7 @@ def inputhandler(player_input):
 
 		if ((player_input == 'look flashlight') and
 			"flashlight" in inventory and
-			game_states["flashlightbatteries"] == 0):
+			game_states["flashlightbatteries"] != 1):
 			print("It is a flashlight.  It needs some batteries, though.")
 			return()		
 
@@ -2440,7 +2444,7 @@ def inputhandler(player_input):
 		if ((player_input == 'look flashlight') and
 			"flashlight" in inventory and
 			(game_states["flashlightbatteries"] == 1 and 
-			game_states["flashlight"] == 0)):
+			game_states["flashlight"] != 1)):
 			print("It is a flashlight. It is currently off.")
 			return()			
 
@@ -2451,7 +2455,7 @@ def inputhandler(player_input):
 			player_input == 'put batteries into flashlight')
 			and ("flashlight" in inventory and 
 				 "batteries" in inventory and 
-				 game_states["flashlightbatteries"] == 0)):
+				 game_states["flashlightbatteries"] != 1)):
 			print("Batteries are now in the flashlight.")
 			game_states["flashlightbatteries"] = 1
 			return()		
@@ -2520,7 +2524,7 @@ def inputhandler(player_input):
 			player_input == 'turn on light' or
 			player_input == 'turn light on')
 			and ("flashlight" in inventory and 
-			game_states["flashlightbatteries"] == 0)):
+			game_states["flashlightbatteries"] != 1)):
 			print("Flashlight won't turn on.  There are no batteries in it.")		
 			return()					
 
@@ -2972,7 +2976,7 @@ def inputhandler(player_input):
 #                              END GAME                               #
 #######################################################################
 def end():
-	if game_states["escaped"] == 0:
+	if game_states["escaped"] != 1:
 		while True:
 			clear()
 			print("\t\t-----------------------------------------------")
@@ -2992,7 +2996,7 @@ def end():
 			print("\n\n\nAfter pushing the iron gate open, you run down the "
 				  "passage...")
 			print("and you step out of the passage into an open grassy "
-				  "meadows!")
+				  "meadow!")
 			print("\n")
 			print("You have escaped!  Congratulations!")			
 			player_input = input("")
@@ -3426,7 +3430,7 @@ def opening():
 			print('\n"Escape" is a text advetnure game. You type what you '
 				  'would like to do.')
 			print("\nHere's a list of commands you can type in the game:")
-			print("LOOK, TAKE, PRESS or PUSH, SEARCH, INSERT, OPEN, CLOSE, "
+			print("LOOK, TAKE, PRESS, PUSH, SEARCH, INSERT, OPEN, CLOSE, "
 				  "\nTURN ON, TURN OFF, USE, UNLOCK")
 			print("\nSome examples of commands: LOOK DIAMOND, TAKE DIAMOND,")
 			print("OPEN BOX WITH KEY, TURN ON LANTERN, INSERT COIN INTO TUBE")
