@@ -467,7 +467,7 @@ def eastroom():
 
 		if ((player_input == 'open box' or 
 			player_input == 'open black box') and
-			(game_states["blackbox"] != 1 or
+			(game_states["blackbox"] != 1 and
                         game_states["blackbox"] != 2)):
 			print("The black box is securely locked.  You can't open it.")
 			continue	
@@ -821,6 +821,7 @@ def westroom():
 			if ((player_input == 'use gold key on box' or 
 				player_input == 'use gold key' or
 				player_input == 'use gold key on golden box' or
+				player_input == 'use gold key on gold box' or                             
 				player_input == 'use gold key to open box' or
 				player_input == 'use gold key to open gold box' or 
 				player_input == 'open box with gold key' or
@@ -846,6 +847,7 @@ def westroom():
 			if ((player_input == 'use gold key on box' or 
 				player_input == 'use gold key' or
 				player_input == 'use gold key on golden box' or
+				player_input == 'use gold key on gold box' or                             
 				player_input == 'use gold key to open box' or
 				player_input == 'use gold key to open gold box' or 
 				player_input == 'open box with gold key' or
@@ -885,6 +887,7 @@ def westroom():
 			if ((player_input == 'use silver key on box' or 
 				player_input == 'use silver key' or
 				player_input == 'use silver key on golden box' or
+				player_input == 'use silver key on gold box' or
 				player_input == 'use silver key to open box' or
 				player_input == 'use silver key to open gold box' or 
 				player_input == 'open box with silver key' or
@@ -905,6 +908,7 @@ def westroom():
 			if ((player_input == 'use silver key on box' or 
 				player_input == 'use silver key' or
 				player_input == 'use silver key on golden box' or
+                             	player_input == 'use silver key on gold box' or
 				player_input == 'use silver key to open box' or
 				player_input == 'use silver key to open gold box' or 
 				player_input == 'open box with silver key' or
@@ -924,6 +928,7 @@ def westroom():
 			if ((player_input == 'use iron key on box' or 
 				player_input == 'use iron key' or
 				player_input == 'use iron key on golden box' or
+				player_input == 'use iron key on gold box' or                             
 				player_input == 'use iron key to open box' or
 				player_input == 'use iron key to open gold box' or 
 				player_input == 'open box with iron key' or
@@ -944,6 +949,7 @@ def westroom():
 			if ((player_input == 'use iron key on box' or 
 				player_input == 'use iron key' or
 				player_input == 'use iron key on golden box' or
+				player_input == 'use iron key on gold box' or                             
 				player_input == 'use iron key to open box' or
 				player_input == 'use iron key to open gold box' or 
 				player_input == 'open box with iron key' or
@@ -961,7 +967,8 @@ def westroom():
 				continue														
 
 			if ((player_input == 'open golden box' or 
-				player_input == 'open box') and
+				player_input == 'open box' or
+                                player_input == 'open gold box') and
 				"gold key" not in inventory and 
 				game_states["goldbox"] != 1):
 				print("You can't open the golden box.  You don't have the "
@@ -969,13 +976,15 @@ def westroom():
 				continue			
 
 			if ((player_input == 'open golden box' or 
-				player_input == 'open box') and
+				player_input == 'open box' or
+                                player_input == 'open gold box') and
 				game_states["goldenbox"] == 1):
 				print("The golden box is already open.")
 				continue						
 
-			if ((player_input == 'close box' or 
-				player_input == 'close golden box') and
+			if ((player_input == 'close golden box' or 
+				player_input == 'close box' or
+                                player_input == 'close gold box') and
 				game_states["goldenbox"] == 1):
 				print("You close the golden box.  Upon closing, it "
 					  "automatically locks.")
@@ -1017,7 +1026,8 @@ def westroom():
 				continue		
 
 			if ((player_input == 'look box' or 
-				 player_input == 'look gold box') and
+				 player_input == 'look gold box' or
+                                 player_input == 'look golden box') and
 				(game_states["goldenbox"] != 1)):
 				print("The golden box looks like it's made out of gold. "
 					  "It currently is closed.")
@@ -1025,7 +1035,8 @@ def westroom():
 				continue
 
 			if ((player_input == 'look box' or 
-				 player_input == 'look gold box') and
+				 player_input == 'look gold box' or
+                                 player_input == 'look golden box') and
 				(game_states["goldenbox"] == 1)):
 				print("The golden box looks like it's made out of gold. "
 					  "It currently is open.")
@@ -1037,7 +1048,8 @@ def westroom():
 				continue							
 						
 			if (player_input == 'take box' or 
-				player_input == 'take golden box'):
+				player_input == 'take golden box' or
+                                player_input == 'take gold box'):
 				print("The golden box seems be part of the floor.")
 				print("It is impossible to lift it off the floor.")	
 				continue						
@@ -1241,7 +1253,7 @@ def southroom():
 			player_input == 'open metal access panel' or
 			player_input == 'open panel' or
 			player_input == 'open access') and 
-			(game_states["southaccesspanel"] != 1 or
+			(game_states["southaccesspanel"] != 1 and
                          game_states["southaccesspanel"] != 2)):	
 			print("It's securely locked.")
 			continue				
@@ -1346,7 +1358,7 @@ def southroom():
 			player_input == 'press red' or
 			player_input == 'push red') and 
 			game_states["southaccesspanel"] == 2 and 
-			(game_states["blackbox"] != 1 or
+			(game_states["blackbox"] != 1 and
                         game_states["blackbox"] != 2)):
 			print("You press the red switch.")
 			game_states["blackbox"] = 1
@@ -1916,7 +1928,7 @@ def northroom():
 			player_input == 'press white' or
 			player_input == 'push white' ) and
 			game_states["northaccesspanel"] == 1) and			
-			(game_states["southaccesspanel"] != 1 or
+			(game_states["southaccesspanel"] != 1 and
                         game_states["southaccesspanel"] != 2)):
 			print("You press the white switch.")
 			game_states["southaccesspanel"] = 1
