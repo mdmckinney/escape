@@ -3039,9 +3039,11 @@ def debug():
 		while True:
 			print("Which action do you want to take?")
 			print("1: Add items to inventory")
-			print("2: Change game states")
-			print("3: Change room")
-			print("4: Exit to the game")
+			print("2: Remove items from inventory")			
+			print("3: Change game states")
+			print("4: Change room")
+			print("5: Exit to the game")
+			print("6: Quit the game.")
 			debug_input = input("\n> ")
 			debug_input = debug_input.strip()
 			debug_input = debug_input.lower()
@@ -3098,9 +3100,81 @@ def debug():
 						debug()
 					else:
 						print("Not a valid item or input.")
-						continue		
-
+						continue
 			if debug_input == "2":
+				print("\t\t-----------------------------------------------")
+				print("\n\t\t\t\tDEBUG - REMOVE ITEMS\n")
+				print("\t\t-----------------------------------------------")				
+				print("\n\nEnter the item to remove from inventory.")
+				print("List of items in the game:")
+				print('"paper", "flashlight", "silver key", "gold key", '
+					  '"iron key", "batteries"')
+				print('Enter "all" to remove everything from inventory.')
+				print('Type "exit" when you are done.')	
+				while True:
+					debug_input = input("\n> ")
+					debug_input = debug_input.strip()
+					debug_input = debug_input.lower()
+					if debug_input == "paper":
+                                            if "paper" in inventory:
+                                                inventory.remove("paper")
+                                                print("Paper removed from inventory.")
+                                                continue
+                                            else:
+                                                print("Paper wasn't in the inventory.")
+                                                continue
+					if debug_input == "flashlight":
+                                            if "flashlight" in inventory:
+                                                inventory.remove("flashlight")
+                                                print("Flashlight removed from inventory.")
+                                                continue
+                                            else:
+                                                print("Flashlight wasn't in the inventory.")
+                                                continue					
+					if debug_input == "silver key":
+                                            if "silver key" in inventory:
+                                                inventory.remove("silver key")
+                                                print("Silver key removed from inventory.")
+                                                continue
+                                            else:
+                                                print("Silver key wasn't in the inventory.")
+                                                continue	
+					if debug_input == "gold key":
+                                            if "gold key" in inventory:
+                                                inventory.remove("gold key")
+                                                print("Gold key removed from inventory.")
+                                                continue
+                                            else:
+                                                print("Gold key wasn't in the inventory.")
+                                                continue							
+					if debug_input == "iron key":
+                                            if "iron key" in inventory:
+                                                inventory.remove("iron key")
+                                                print("Iron key removed from inventory.")
+                                                continue
+                                            else:
+                                                print("Iron key wasn't in the inventory.")
+                                                continue
+					if debug_input == "batteries":
+                                            if "batteries" in inventory:
+                                                inventory.remove("batteries")
+                                                print("Batteries removed from inventory.")
+                                                continue
+                                            else:
+                                                print("Batteries wasn't in the inventory.")
+                                                continue
+					if debug_input == "all":
+						inventory.clear()	
+						print("All items removed from inventory.")						
+						continue						
+					if debug_input == "exit":
+						debug()
+					else:
+						print("Not a valid item or input.")
+						continue
+					    
+
+			if debug_input == "3":
 				print("\t\t-----------------------------------------------")
 				print("\n\t\t\t     DEBUG - MODIFY STATES\n")
 				print("\t\t-----------------------------------------------")
@@ -3359,7 +3433,7 @@ def debug():
 						print("Not a valid input.")
 						continue		
 
-			if debug_input == "3":
+			if debug_input == "4":
 				print("\t\t-----------------------------------------------")
 				print("\n\t\t\t      DEBUG - CHANGE ROOM\n")
 				print("\t\t-----------------------------------------------")
@@ -3386,7 +3460,7 @@ def debug():
 						print("Not a valid input.")
 						continue
 
-			if debug_input == '4':
+			if debug_input == '5':
 				if game_states["roomid"] == 1:
 					centerroom()
 				if game_states["roomid"] == 2:
@@ -3402,7 +3476,10 @@ def debug():
 					print("\n\t\t\t\t   DEBUG\n")
 					print("\t\t-----------------------------------------------\n\n")
 					print("Invalid room id.\n")
-					continue                                                            
+					continue
+				    
+			if debug_input == '6':
+				end()
 
 			else:
 				print("Not a valid input.\n")
