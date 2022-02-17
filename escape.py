@@ -975,7 +975,7 @@ def westroom():
 			if ((player_input == 'close box' or 
 				player_input == 'close golden box') and
 				game_states["goldenbox"] == 1):
-				print("You closed the golden box.  Upon closing, it "
+				print("You close the golden box.  Upon closing, it "
 					  "automatically locks.")
 				game_states["goldenbox"] = 0
 				continue			
@@ -1671,11 +1671,15 @@ def northroom():
 		player_input = player_input.lower()
 
 		### NORTH / SOUTH / EAST / WEST ###
-		if ((player_input == 'n' or player_input == 'north') and 
+		if ((player_input == 'n' or
+                     player_input == 'north' or
+                     player_input == 'open gate') and 
 			game_states["irongate"] == 0):
 			print("The iron gate is locked.")
 			continue
-		if ((player_input == 'n' or player_input == 'north') and 
+		if ((player_input == 'n' or
+                     player_input == 'north' or
+                     player_input == 'open gate') and 
 			game_states["irongate"] == 1):
 			game_states["escaped"] = 1
 			end()			
@@ -1967,13 +1971,14 @@ def northroom():
 		if ((player_input == 'close box' or 
 			player_input == 'close silver box') and
 			game_states["silverbox"] == 1):
-			print("You closed the silver box.  Upon closing, it automatically "
+			print("You close the silver box.  Upon closing, it automatically "
 				  "locks.")
 			game_states["silverbox"] = 0
 			continue			
 
 		if ((player_input == 'open box' or 
-             player_input == 'open silver box' or  
+                         player_input == 'open silver box' or
+                         player_input == 'use key on box' or
 			 player_input == 'open box with key') and
 			("silver key" in inventory or 
 			 "gold key" in inventory or 
@@ -2306,7 +2311,18 @@ def northroom():
 			"silver key" in inventory or 
 			"gold key" in inventory)): 
 			print("Please specify which key to open which lock.")	
-			continue	
+			continue
+
+		if ((player_input == 'use key on gate') or
+                        player_input == 'use key to open gate' or
+                        player_input == 'use key to unlock gate' or
+                        player_input == 'open gate with key' and
+			("iron key" in inventory or 
+			"silver key" in inventory or 
+			"gold key" in inventory)): 
+			print("Please specify which key to use to open the gate.")	
+			continue
+		    
 
 		### PRESSURE PLATE ###
 		if (player_input == 'look pressure plate' or
@@ -2563,7 +2579,9 @@ def inputhandler(player_input):
 			print("You already took the iron key.")
 			return()											
 
-		if ((player_input == 'use key') and 
+		if ((player_input == 'use key') or
+                        player_input == 'use key on box' or
+                        player_input == 'open box with key' and 
 			("gold key" not in inventory and 
 			 "silver key" not in inventory and
 			 "iron key" not in inventory)):	
