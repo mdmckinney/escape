@@ -1,0 +1,98 @@
+Walkthrough for the text adventure game, "Escape." 
+
+CENTER ROOM
+Go east
+
+EAST ROOM
+Take paper
+Press yellow switch
+Press green switch
+Go west
+
+CENTER ROOM
+Go north
+
+NORTH ROOM
+Open access panel
+Press gray switch
+Close access panel
+Go south
+
+CENTER ROOM
+Go south
+
+SOUTH ROOM
+Take planter
+Take gold key
+Take rubbish
+Open access panel
+Press red switch
+Press blue switch
+Close panel
+Go north
+
+CENTER ROOM
+Go east
+
+EAST ROOM
+Open black box
+Take silver key
+Close black box
+Press yellow switch
+Press green switch
+Go west
+
+CENTER ROOM
+Go north
+
+NORTH ROOM
+Open silver box with silver key
+Take batteries
+Go south
+
+CENTER ROOM
+Go south
+
+SOUTH ROOM
+Open access panel
+Press blue switch
+Close access panel
+Go north
+
+CENTER ROOM
+Go east
+
+EAST ROOM
+Open box
+Press yellow switch
+Go west
+
+CENTER ROOM
+Put batteries into flashlight
+Turn flashlight on
+Go west
+
+WEST ROOM
+Open golden box with gold key
+Take iron key
+Close golden box
+Turn flashlight off
+Go east
+
+CENTER ROOM
+Go east
+
+EAST ROOM
+Close black box
+Press yellow switch
+Press green switch
+Go west
+
+CENTER ROOM
+Go north
+
+NORTH ROOM
+Open gate with iron key
+Go north
+
+Congratulations, you escaped!
